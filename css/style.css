@@ -148,6 +148,7 @@ header{
 section.jp {
 	width: 100%;
 	display: grid;
+	padding: 4;
 
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -273,6 +274,7 @@ main .content p{
 .cohort .content .text-container{
     flex: 1;
     width: 100%;
+	padding: 5;
 }
 
 .cohort .content .img-container img{
