@@ -114,6 +114,7 @@ header{
 
 .sectiontext h1{
 	font-size: 40px;
+	padding: 2px;
 }
 
 .sectionright{
@@ -149,8 +150,7 @@ section.jp {
 	width: 100%;
 	display: grid;
 	padding: 4;
-
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 main{
@@ -207,11 +207,13 @@ main .content p{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 7px;
 	
     } 
     
 .jp .content .text-container h1{
     font-size: 20px;
+	padding: 7px;
     } 
     
 .jp .content .text-container p{
@@ -219,6 +221,7 @@ main .content p{
         flex: 1;
         line-height: 2.3;
         font-family: Rubik sans-serif;
+		padding: 5px;
     }
     
 .jp .content .text-container button{
@@ -292,55 +295,23 @@ main .content p{
     border: blue 2px solid;
 }  
 
-
-@media screen and (width < 960px) {
-	.section-new{
-		flex-direction: column;
-	}
-	.sectionimage img{
-		/* height: 100%; */
-		/* width: 100%; */
-		height: 300px;
-	}
-	.cohort{
-		grid-template-columns: 1fr 1fr 1fr;
-	} 
+@media screen and (max-width:600px){
+    header nav ul{
+        position:absolute;
+        top: 0;
+        right: 0;
+        height: 150px;
+        flex-direction: column;
+    background-color: #c499ec;
+    justify-content: flex-start;
+    padding-right: 200px;
+    gap: 0px;
+    align-items: center;
+    }
+    header nav  ul li{
+        margin-top: 7px;
+    }
+    header nav  ul li a{
+        color: inherit;
+    }
 }
-
-@media screen and (width < 820px) {
-	section.jp {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-}
-@media screen and (width < 715px) {
-	.cohort{
-		grid-template-columns: 1fr 1fr;
-	} 
-}
-@media screen and (width < 665px) {
-	section.jp{
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
-@media screen and (width < 491px) {
-	.cohort{
-		grid-template-columns: 1fr;
-	} 
-}
-
-@media screen and (width < 400px) {
-	section.jp{
-		grid-template-columns: 1fr;
-	}
-}
-
-
-
-
-
-
-
-
-
- 
