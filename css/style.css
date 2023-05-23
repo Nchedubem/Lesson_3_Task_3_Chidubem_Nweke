@@ -74,6 +74,13 @@ header{
     justify-content: space-between;
     padding: 10px;
     background-color: #e8ebee;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.material-icons{
+	align-self: center;
+	color: orangered;
+	display: none;
 }
 
 .section-new{
@@ -81,6 +88,7 @@ header{
 	background-color: blue;
 	width: 100vw;
 	height: 100vh;
+	margin-top: 70px;
 }
 
 .sectionimage{
@@ -139,17 +147,18 @@ header{
 .navbar{
     padding: 5px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     flex: 4;
-	margin-right: 20px;
+	/* margin-right: 10px; */
+	margin-left: 30px;
 }
 
 section.jp {
 	width: 100%;
 	display: grid;
-	padding: 4;
+	padding: 2;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
@@ -166,7 +175,7 @@ main{
 }
 
 main .content{
-     height: 50vh; 
+    height: 50vh; 
     display: flex;
     flex-direction: column;
 }
@@ -295,23 +304,49 @@ main .content p{
     border: blue 2px solid;
 }  
 
-@media screen and (max-width:600px){
-    header nav ul{
-        position:absolute;
-        top: 0;
-        right: 0;
-        height: 150px;
-        flex-direction: column;
-    background-color: #c499ec;
-    justify-content: flex-start;
-    padding-right: 200px;
-    gap: 0px;
-    align-items: center;
+@media screen and (width <= 850px) {
+    section.jp{
+        grid-template-columns: 1fr 1fr 1fr ;
     }
-    header nav  ul li{
-        margin-top: 7px;
-    }
-    header nav  ul li a{
-        color: inherit;
+
+	.cohort{
+        grid-template-columns: 1fr 1fr 1fr ;
     }
 }
+
+@media screen and (width <= 730px) {
+    section.jp{
+        grid-template-columns: 1fr 1fr ;
+    }
+
+	.cohort{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (width <= 600px) {
+	.section-new{
+		flex-direction: column;
+	}
+}
+
+@media screen and (width <= 540px) {
+	.navbar{
+		display: none;
+	}
+
+	.material-icons{
+		display: block;
+	}
+}
+
+@media screen and (width <= 480px) {
+    section.jp{
+        grid-template-columns: 1fr ;
+    }
+
+	.cohort{
+        grid-template-columns: 1fr ;
+    }
+}
+
